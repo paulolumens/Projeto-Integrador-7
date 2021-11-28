@@ -440,18 +440,8 @@ void setup(void) {
 }
 
 void loop(void) {
-  web_server.handleClient();
-  //getAppGoogle();
+  web_server.handleClient();//verifica solicitacoes
   delay(1000);
 }
 
-void getAppGoogle(){
-      if (cliente.connect("192.168.0.45", 80) == true) {
-      //Tenta se conectar ao servidor do Google APIs na porta 443 (HTTPS)
-      Serial.println("Conseguiu conexão com Servidor Clima IoT");
-    }
-    else {
-      Serial.println("Falha na conexão com Servidor Clima IoT");
-    }
-    return;
-}
+//end
